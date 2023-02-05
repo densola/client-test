@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.banner {
+    padding: 10vh 10vw;
+    text-align: center;
+    color: white;
+
+    background-color: #e4ded8;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F0c%2Fbd%2F08%2F0cbd08ed748d87282cd157272ab780a8.jpg&f=1&nofb=1&ipt=4db9e718a3b4ecc1179eccc2775809c8cab560e93813bd9403bd244ef1a7ec3e&ipo=images");
+    background-position: center;
+    background-size: cover;
+}
+
+.banner > h2 {
+    margin-top: 15px;
+}
+
+.banner > p {
+    margin-top: 7px;
+}
+
+.box {
+    width: 20rem;
+    height: 20rem;
+    margin: 0 auto;
+    border: 10px solid white;
+    padding: 1vw;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1vw;
+
+    width: 15rem;
+    height: 15rem;
+}
+
+@media (max-width:400px) {
+    .box {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .inner-box {
+        width: 10rem;
+        height: 10rem;
+        font-size: 12px;
+    }
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 5vh 10vw;
+    background-color: #eabe93;
+    color: #38210d;
+}
+
+.card {
+    width:200px;
+    margin:2vh;
+    text-align: center;
+    background-color: rgb(255, 227, 198);
+    align-self: stretch;
+    outline: 10px solid rgb(255, 227, 198);
+}
+
+.card:hover {
+    outline: 15px solid rgb(255, 227, 198);
+    transition: 1s;
+}
+
+.card > img {
+    width:200px;
+}
+
+.card > p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.img-n-txt {
+    background-color: #90654a;
+    color: white;
+    padding: 7vh 10vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    flex-wrap: wrap;
+}
+
+.img-n-txt > img {
+    border:5px solid white;
+}
+
+.text {
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+.modal-container {
+    padding: 10vh 10vw;
+    background-color: #9d897d;
+}
+
+.modal {
+    background-color: white;
+    padding: 3vw;
+    text-align: center;
+    color: #58331c;
+}
+
+.modal > h1 {
+    margin-bottom: 10px;
+}
+
+.modal > p {
+    margin-bottom: 10px;
+    max-width: 600px;
+    margin: 0 auto 10px auto;
+}
+
+.modal > button {
+    padding:10px 20px;
+    background-color: #58331c;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.modal > button:hover {
+    background-color:#90654a;
+    transition: 1s;
+}
+
+.grid-container {
+    max-width: 500px;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.top {
+    padding-top:20%;
+    grid-row: 1;
+    grid-column: 1 / span 8;
+    z-index: 1;
+}
+
+.bottom {
+    grid-row: 1;
+    grid-column: 4 / -1;
+}
+
+.img-stack {
+    padding: 10vh 10vw;
+    background-color: #eabe93;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+
+.img-stack > p {
+    font-size: 20px;
+    padding-top: 20px;
+    max-width: 300px;
+    color: #58331c;
+}
+
+.img-stack > p, .stack-container {
+    margin: 1vw;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding:16px;
+    background-color: #90654a;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+    padding: 0px 1vh;
+}
+
+.right-bar {
+    display:flex;
+    gap:1vh;
+}
+
+.right-bar-btn {
+    background-color:#90654a;
+    border:1px solid white;
+    color: white;
+    border-radius: 5px;
+
+    display:none;
+    align-items: center;
+}
+
+.right-bar-btn:active {
+    background-color: #58331c;
+}
+
+@media (max-width:600px) {
+    .links {
+        display: none;
+        flex-direction: column;
+        position:absolute;
+        width: 100%;
+        background-color: #eabe93;
+        left: 0;
+        padding: 1vh;
+        margin-top: 40px;
+    }
+    .link {
+        border-bottom: 1px solid white;
+    }
+    .right-bar-btn {
+        display: flex;
+    }
+}
