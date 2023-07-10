@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Display Coordinates of Chicago using Google Maps Geocoding API
+    </title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        text-align: center;
+      }
+
+      img {
+        max-width: 500px;
+        width: 100%;
+      }
+
+      .img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      p {
+        font-size: 2rem;
+      }
+      
+      .testdiv {
+        background-color: blue;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>API Test</h1>
+    <div class="img-container">
+      <img alt="Image of a dog" id="dog" />
+    </div>
+    <p id="text"></p>
+
+    <script>
+      function displayDog() {
+        const img = document.getElementById('dog')
+        fetch('https://dog.ceo/api/breeds/image/random')
+          .then((response) => response.json())
+          .then((data) => {
+            img.src = data.message
+          })
+          .catch((error) => {
+            alert('Error in displayDog()')
+          })
+      }
+
+      function displayJoke() {
+        const p = document.getElementById('text');
+        fetch('https://api.chucknorris.io/jokes/random')
+          .then((response) => response.json())
+          .then((data) => {
+            p.textContent = data.value;
+          })
+          .catch((error) => {
+            alert('Error in displayJoke()');
+          })
+      }
+      displayDog();
+      displayJoke();
+
+      function changeDivtoRed() {
+        const testdiv = document.getElementById('testdiv');
+        testdiv.setAttribute('style', 'background-color:red;')
+      }
+      changeDivtoRed();
+    </script>
+  </body>
+</html>
