@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Test Site</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<body>
+<body">
     <nav>
         <div class="logo">
             <h1>Titlename</h1>
         </div>
-        <ul class="links">
+        <ul class="links slide-top-for-links">
             <li class="link">Home</li>
             <li class="link">Events</li>
             <li class="link">Updates</li>
             <li class="link">Resources</li>
             <li class="link">About</li>
+            <li class="link back">Back</li>
         </ul>
         <div class="right-bar">
             <ul>
@@ -54,8 +55,8 @@
         </div>
     </div>
     <div class="img-n-txt">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F6e%2Ff2%2Fce%2F6ef2ce782d26acec77aa37069067331d.jpg&f=1&nofb=1&ipt=e05979248e804629c13390bfc4ca4f583492c91553cbc5ff6af57395b2a8b0d7&ipo=images" style="width:100%;max-width:300px;">
-        <div class="text">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F6e%2Ff2%2Fce%2F6ef2ce782d26acec77aa37069067331d.jpg&f=1&nofb=1&ipt=e05979248e804629c13390bfc4ca4f583492c91553cbc5ff6af57395b2a8b0d7&ipo=images" style="width:100%;max-width:300px;" class="js-scroll slide-left">
+        <div class="text js-scroll">
             <h1>Here's a heading</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Posuere lorem ipsum dolor sit amet.</p>
         </div>
@@ -69,7 +70,7 @@
     </div>
     <div class="img-stack">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Posuere lorem ipsum dolor sit amet.</p>
-        <div class="stack-container">
+        <div class="stack-container js-scroll slide-top">
             <div class="grid-container">
                 <div class="top">
                     <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp6158528.jpg&f=1&nofb=1&ipt=c5ac970db9828b0832e70eabb1c7925d0e603c953b7bc85143c0fe6985ca6eba&ipo=images" style="width:100%">
@@ -81,21 +82,12 @@
         </div>
     </div>
     <div class="contact-form">
-        <div class="contact-info">
-            <p>Contact Us</p>
-            <h1>Lorem ipsum dolor sit amet</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, beatae eligendi?</p>
-            <span>
-                211 Lorem Upsum Dr. <br>
-                Sit, Amet Consectetur <br>
-                1234567890
-            </span>
-        </div>
-        <form action="submit">
-            <input type="text">
-            <input type="text">
-            <input type="email" name="" id="">
-            inpu
+        <form action="submit" class="contact">
+            <h1>Contact Us</h1>
+            <input class="entry" type="text" placeholder="Enter your name here..."> <br>
+            <input class="entry" type="email" name="" id="" placeholder="Enter your email here..."> <br>
+            <input class="entry message" type="text" name="" id="" placeholder="Type message..."> <br>
+            <input type="button" value="Submit" class="submit-btn">
         </form>
     </div>
 </body>
