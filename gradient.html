@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            :root {
+                --anim-duration: 3s;
+                --primary-color: #ff85d2;
+                --secondary-color: #8e75ff;
+            }
+            #gradient {
+                background: none;
+                opacity: 0.8;
+            }
+            #gradient:after,
+            #gradient:before {
+                bottom: 0;
+                content: "";
+                display: block;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            #gradient:before {
+                animation: opacity-animation var(--anim-duration) ease-in-out 0s infinite alternate;
+                background: linear-gradient(90deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            }
+            #gradient:after {
+                animation: opacity-animation var(--anim-duration) ease-in-out calc(-1 * var(--anim-duration)) infinite alternate;
+                background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            }
+            @keyframes opacity-animation {
+                0% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="gradient"></div>
+    </body>
+</html>
