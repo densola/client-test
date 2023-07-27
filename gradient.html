@@ -6,7 +6,7 @@
         <title>Document</title>
         <style>
             :root {
-                --anim-duration: 3s;
+                --gradient-duration: 5s;
                 --primary-color: #ff85d2;
                 --secondary-color: #8e75ff;
             }
@@ -25,11 +25,11 @@
                 top: 0;
             }
             #gradient:before {
-                animation: opacity-animation var(--anim-duration) ease-in-out 0s infinite alternate;
+                animation: opacity-animation var(--gradient-duration) ease-in-out 0s infinite alternate;
                 background: linear-gradient(90deg, var(--secondary-color) 0%, var(--primary-color) 100%);
             }
             #gradient:after {
-                animation: opacity-animation var(--anim-duration) ease-in-out calc(-1 * var(--anim-duration)) infinite alternate;
+                animation: opacity-animation var(--gradient-duration) ease-in-out calc(-1 * var(--gradient-duration)) infinite alternate;
                 background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             }
             @keyframes opacity-animation {
